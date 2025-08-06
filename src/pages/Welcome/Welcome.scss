@@ -1,0 +1,88 @@
+.welcome {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  &__bg {
+    background: url('../../assets/img/background_round.PNG') no-repeat center/cover;
+    position: absolute;
+    inset: 0;
+    min-height: 100vh; /* Ensures background covers the full viewport height */
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Content takes full viewport height */
+    gap: 2rem;
+    padding: 1rem; /* Adds some padding for smaller screens */
+  }
+
+  &__logo {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.8;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+
+    .first {
+      color: #006C84;
+    }
+
+    .second {
+      color: #f26b1d;
+    }
+
+    .third {
+      color: #53AAB8;
+    }
+  }
+
+  &__art_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 24rem; /* Limits art container width for responsiveness */
+  }
+
+  &__art {
+    width: 100%; /* Makes art responsive within its container */
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__button {
+    font-family: "Baloo 2", sans-serif;
+    margin: 1rem 0;
+    padding: 1.5rem 6rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #f26b1d;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#f26b1d, 5%);
+    }
+  }
+}
