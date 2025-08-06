@@ -1,5 +1,7 @@
 import './Rules.scss'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useGame } from '../../context/GameContext';
 
 function PlayerForm({ player, onNameChange, onEmojiChange, emojiOptions }) {
     const [showEmojiPicker, setShowEmojiPicker] = useState(false);
@@ -41,6 +43,9 @@ function PlayerForm({ player, onNameChange, onEmojiChange, emojiOptions }) {
 }
 
 export function Rules() {
+    const navigate = useNavigate();
+    const{setPlayers: setGlobalPlayers} = useGame();
+
     const emojiOptions = [
         '🐶', '🐱', '🐭', '🐹', '🐰',
         '🦊', '🐻', '🐼', '🐨', '🐯',
@@ -48,7 +53,7 @@ export function Rules() {
     ];
 
     const [players, setPlayers] = useState([
-        { id: 1, name: '', emoji: '🐶' }
+        { id: 1, name: '', emoji: '🐶', score: 0 }
     ]);
 
     const handleNameChange = (id, name) => {
@@ -68,11 +73,16 @@ export function Rules() {
             const newPlayer = {
                 id: players.length + 1,
                 name: '',
-                emoji: emojiOptions[players.length] // Pick next emoji
+                emoji: emojiOptions[players.length],
+                score: 0,
             };
             setPlayers([...players, newPlayer]);
         }
     };
+
+    const handleStart = () => {
+        setGlobalPlayers(players);
+        navigate('/game');}
 
 
     return (
@@ -110,10 +120,10 @@ export function Rules() {
                     )}
                 </div>
 
-                <button className="rules__start-btn">
+                <button className="rules__start-btn" onClick={handleStart}>
                     Start
                 </button>
             </div>
         </div>
     );
-}
+    }

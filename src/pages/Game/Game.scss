@@ -1,19 +1,19 @@
 .game-logo {
-  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 0.9;
   text-align: center;
-  line-height: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #144552; // your deep blue
-    letter-spacing: 2px;
-    margin: 0.3rem 0;
+  span {
+    display: block;
   }
-}
 
+  .first { color: var(--color-logo-blue-first); }
+  .second { color: var(--color-logo-orange-second); }
+  .third { color: var(--color-logo-teal-third); }
+}
 
 
 .round-info {
@@ -34,8 +34,8 @@
   gap: 1rem;
 
   img {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     object-fit: contain;
     flex-shrink: 0;
   }
@@ -43,9 +43,9 @@
   span {
     text-align: center;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
     word-break: break-word;
-    text-align: left;
+    text-align: center;
     line-height: 1.2;
   }
 }
@@ -54,10 +54,10 @@
 .letter-tile {
   background-color: #49A8AD;
   color: white;
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 1.5rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -70,10 +70,10 @@
   margin: 2rem auto;
   background-color: #F26A3E;
   color: white;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -84,7 +84,7 @@
 }
 
 .round-number {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #144552;
   margin-bottom: 1rem;
@@ -96,10 +96,10 @@
   margin: 1rem auto 0;
   background-color: #144552;
   color: white;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
