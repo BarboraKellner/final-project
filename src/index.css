@@ -1,10 +1,10 @@
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+ *::before,
+ *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
 
 html,
 body {
@@ -13,4 +13,22 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-optical-sizing: auto;
     overflow-x: hidden;
+}
+
+:root {
+    /* Logo colors */
+    --color-logo-blue-first: #006C84;
+    --color-logo-orange-second: #f26b1d;
+    --color-logo-teal-third: #53AAB8;
+
+    /* Background */
+    --color-bg-peach: #fddbb2;
+
+    /* Elements */
+    --color-tile-yellow: #FFF4B2;
+    --color-tile-teal: #49A8AD;
+    --color-text-dark: #144552;
+    --color-button-orange: #f26b1d;
+    --color-button-dark: #144552;
+    --color-input-cream:#FFF9E6
 }

@@ -11,7 +11,7 @@
     background: url('../../assets/img/background_round.PNG') no-repeat center/cover;
     position: absolute;
     inset: 0;
-    min-height: 100vh; /* Ensures background covers the full viewport height */
+    min-height: 100vh;
     z-index: -1;
   }
 
@@ -21,9 +21,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100vh; /* Content takes full viewport height */
-    gap: 2rem;
-    padding: 1rem; /* Adds some padding for smaller screens */
+    min-height: 100vh;
+    padding: 1rem;
   }
 
   &__logo {
@@ -55,11 +54,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 24rem; /* Limits art container width for responsiveness */
+    max-width: 24rem;
   }
 
   &__art {
-    width: 100%; /* Makes art responsive within its container */
+    width: 100%;
     img {
       width: 100%;
       height: auto;

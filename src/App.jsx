@@ -1,13 +1,13 @@
 import './App.css'
 import Welcome from './pages/Welcome/Welcome';
-import {Game} from './pages/Game/Game.jsx'
+import {Game} from './pages/Game/Game';
+import {Rules} from './pages/Rules/Rules';
+
 
 import {
     BrowserRouter,
     Routes,
     Route,
-    Link,
-    Outlet,
 } from "react-router-dom";
 
 
@@ -17,7 +17,7 @@ export function App() {
             <Routes>
                 <Route path="/" element={<Welcome />} />
                 <Route path="/game" element={<Game />} />
-                {/* other routes if needed */}
+                <Route path="/rules" element={<Rules />} />
             </Routes>
         </BrowserRouter>
     );

@@ -1,0 +1,167 @@
+.rules {
+  min-height: 100vh;
+  background-color: var(--color-bg-peach);
+  background-image: url('../../assets/img/background_waves.PNG');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow-y: auto;
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  &__logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span {
+      display: block;
+    }
+
+    .first { color: var(--color-logo-blue-first); }
+    .second { color: var(--color-logo-orange-second); }
+    .third { color: var(--color-logo-teal-third); }
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__players {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__player-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //gap: 0.2rem;
+    position: relative;
+  }
+
+  &__player-emoji {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__player-input {
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    border: none;
+    max-width: 250px;
+    border-radius: 2rem;
+    background: var(--color-input-cream);
+    color: var(--color-text-dark);
+    font-family: inherit;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-button-orange);
+    }
+
+    &::placeholder {
+      color: var(--color-text-dark);
+      opacity: 0.6;
+    }
+
+  }
+
+  &__emoji-picker {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    background: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.3rem;
+    z-index: 10;
+
+    button {
+      width: 45px;
+      height: 45px;
+      border: none;
+      background: transparent;
+      font-size: 1.8rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: var(--color-tile-yellow);
+      }
+    }
+  }
+
+  &__add-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-tile-yellow);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__start-btn {
+    background: var(--color-button-orange);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2rem auto;
+    display: block;
+    font-family: inherit;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

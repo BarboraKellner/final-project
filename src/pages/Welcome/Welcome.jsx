@@ -1,6 +1,9 @@
 import './Welcome.scss'
+import {useNavigate} from 'react-router-dom'
 
 export default function Welcome() {
+    const navigate = useNavigate();
+
     return (
         <div className="welcome">
             <div className="welcome__bg"/>
@@ -16,7 +19,9 @@ export default function Welcome() {
                     <img src="/src/assets/img/art_mobile.PNG" alt="welcomeArt" className="welcome__art"/>
                 </div>
 
-                <button className="welcome__button">Play!</button>
+                <button className="welcome__button" onClick={() => navigate('/rules')}>
+                    Play!
+                </button>
             </div>
         </div>
 
