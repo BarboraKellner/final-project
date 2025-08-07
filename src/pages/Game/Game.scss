@@ -18,9 +18,9 @@
 
 .round-info {
   display: flex;
-  gap: 1.2rem;
+ // gap: 1rem;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .category-tile {
@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  //gap: 1rem;
 
   img {
     width: 6rem;
@@ -67,7 +67,7 @@
 
 .shuffle-btn {
   display: block;
-  margin: 2rem auto;
+  margin: 2.8rem auto;
   background-color: #F26A3E;
   color: white;
   padding: 1rem 3rem;
@@ -84,16 +84,16 @@
 }
 
 .round-number {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #144552;
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
   text-align: center;
 }
 
 .next-round-btn {
   display: block;
-  margin: 1rem auto 0;
+  margin: 2rem auto 2rem;
   background-color: #144552;
   color: white;
   padding: 1rem 3rem;
@@ -156,3 +156,106 @@
   text-align: center;
 }
 
+// Winner selector dropdown
+.winner-selector {
+ // margin-top: 2rem;
+  text-align: center;
+  max-width: 400px;
+
+  label {
+    display: block;
+    font-size: 2rem;
+    color: var(--color-button-dark);
+    //margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .player-dropdown {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    border: none;
+    background: var(--color-tile-yellow);
+    color: var(--color-text-dark);
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 1.5em;
+    padding-right: 3rem;
+  }
+}
+
+.top-up-btn {
+  display: block;
+  margin: 1rem auto 0.5rem;
+  background: var(--color-button-orange);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+}
+
+
+
+// Score table with integrated background
+.score-table {
+  margin-top: 2rem;
+  background: var(--color-tile-teal);
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2rem;
+
+  .score-list {
+    padding: 0;
+  }
+
+  .score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .player-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2rem;
+    }
+
+    .player-score {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+}
