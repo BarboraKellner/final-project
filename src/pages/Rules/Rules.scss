@@ -13,6 +13,18 @@
     padding: 2rem 1rem;
   }
 
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
   &__logo {
     font-size: 2.5rem;
     font-weight: 900;
@@ -128,6 +140,14 @@
     }
   }
 
+  &__player-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+
   &__add-btn {
     width: 60px;
     height: 60px;
@@ -140,7 +160,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__remove-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-tile-yellow);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       transform: scale(1.05);

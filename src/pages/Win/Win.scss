@@ -1,0 +1,134 @@
+.win {
+  min-height: 100vh;
+  background-color: var(--color-bg-peach);
+  background-image: url('../../assets/img/background_win_mobile.PNG');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow-y: auto;
+
+  &__firework_large {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    img {
+      width: 8rem;
+      height: auto;
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+
+  &__firework_small {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    img {
+      width: 3.5rem;
+      height: auto;
+      animation: float 2.5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1.5);
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateX(1rem) translateY(0);
+    }
+    50% {
+      transform: translateX(1rem) translateY(-0.5rem);
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  &__logo {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.8;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+
+    .first {
+      color: var(--color-logo-blue-first);
+    }
+
+    .second {
+      color: var(--color-logo-orange-second);
+    }
+
+    .third {
+      color: var(--color-logo-teal-third);
+    }
+  }
+
+  &__congrats {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-logo-orange-second);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+
+
+  &__winner-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin: 2rem 0;
+
+    .win__winner-name {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-text-dark);
+    }
+
+    .win__winner-message {
+      font-size: 1.6rem;
+      margin-top: 0.5rem;
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__button {
+    background: var(--color-button-orange);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+

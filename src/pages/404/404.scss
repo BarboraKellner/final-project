@@ -1,0 +1,79 @@
+.notfound {
+
+  min-height: 100vh;
+  background-color: var(--color-bg-peach);
+  background-image: url('../../assets/img/background_waves.PNG');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+  &__waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__content {
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__duck {
+    width: 200px;
+    margin: 0 auto 1rem;
+    display: block;
+    animation: bob 2s infinite ease-in-out;
+    margin-top: 1rem;
+  }
+
+  &__title {
+    font-size: 5.5rem;
+    color: var(--color-button-orange);
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: var(--color-text-brown, #5c4033);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 6rem;
+
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: var(--color-button-orange);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #d9552b;
+    }
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

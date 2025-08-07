@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import {supabase} from '../../api/supabase'
+import { useNavigate } from 'react-router-dom';
+
 import {useGame} from '../../context/GameContext'
 
 import './Game.scss'
@@ -134,6 +136,8 @@ function ScoreTable({ players }) {
 // Main Game component
 export function Game() {
     const { players, setPlayers } = useGame();
+    const navigate = useNavigate();
+
     const [categories, setCategories] = useState(null)
     const [selectedCat, setSelectedCat] = useState(null)
     const [letter, setLetter] = useState(null)
@@ -145,7 +149,33 @@ export function Game() {
     );
 
     useEffect(() => {
-        getCategories()
+        // Check if we're coming from Rules page
+        const showInitial = localStorage.getItem('showInitialCountdown');
+
+        if (showInitial === 'true') {
+            localStorage.removeItem('showInitialCountdown');
+
+            // Show countdown first
+            setShowCountdown(true);
+            setCountdown(3);
+
+            let counter = 3;
+            const interval = setInterval(() => {
+                counter--;
+                setCountdown(counter);
+
+                if (counter === 0) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        setShowCountdown(false);
+                        getCategories(); // Load categories AFTER countdown
+                    }, 1000);
+                }
+            }, 1000);
+        } else {
+            // Normal load
+            getCategories();
+        }
     }, [])
 
     const shuffle = (catList) => {
@@ -194,10 +224,18 @@ export function Game() {
                     ? { ...player, score: player.score + 1 }
                     : player
             );
+
             setPlayers(updatedPlayers);
             setSelectedPlayerId(null);
+
+
+            const winningPlayer = updatedPlayers.find(p => p.score >= 10);
+            if (winningPlayer) {
+                navigate('/win');
+            }
         }
     };
+
 
     return (
         <div className="game-page">

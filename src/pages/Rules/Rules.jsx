@@ -80,8 +80,17 @@ export function Rules() {
         }
     };
 
+    const removePlayer = () => {
+        if (players.length > 1) {
+            setPlayers(players.slice(0, -1));
+        }
+    };
+
     const handleStart = () => {
         setGlobalPlayers(players);
+
+        localStorage.setItem('showInitialCountdown', 'true');
+
         navigate('/game');}
 
 
@@ -100,6 +109,10 @@ export function Rules() {
                     <p>• First to 10 points wins the game!</p>
                 </div>
 
+                <div className="rules__image">
+                    <img src="/src/assets/img/art_img_1.png" alt="Game illustration"/>
+                </div>
+
                 <h2 className="rules__subtitle">Pick emoji and enter names:</h2>
 
                 <div className="rules__players">
@@ -112,7 +125,14 @@ export function Rules() {
                             emojiOptions={emojiOptions}
                         />
                     ))}
+                </div>
 
+                <div className="rules__player-buttons">
+                    {players.length > 1 && (
+                        <button className="rules__remove-btn" onClick={removePlayer}>
+                            ➖
+                        </button>
+                    )}
                     {players.length < 10 && (
                         <button className="rules__add-btn" onClick={addPlayer}>
                             ➕
@@ -126,4 +146,4 @@ export function Rules() {
             </div>
         </div>
     );
-    }
+}
