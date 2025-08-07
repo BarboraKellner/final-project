@@ -62,7 +62,7 @@
     font-size: 5rem;
     font-weight: 900;
     line-height: 0.8;
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin-bottom: 1rem;
 
     span {
@@ -96,20 +96,20 @@
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-text-dark);
-    margin: 2rem 0;
+   // margin: 1rem 0;
 
     .win__winner-name {
       display: block;
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       font-weight: 900;
       color: var(--color-text-dark);
     }
 
     .win__winner-message {
-      font-size: 1.6rem;
-      margin-top: 0.5rem;
+      font-size: 2rem;
+     // margin-top: 0.5rem;
       display: block;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
 
