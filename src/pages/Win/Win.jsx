@@ -24,7 +24,7 @@ export function Win() {
                 <p className="win__congrats">CONGRATULATIONS!</p>
 
                 <div className="win__firework_large">
-                    <img src="/src/assets/img/firework_large.png" alt="firework large"/>
+                    <img src="/firework_large.png" alt="firework large"/>
                 </div>
 
 
@@ -37,7 +37,7 @@ export function Win() {
                 )}
 
                 <div className="win__firework_small">
-                    <img src="/src/assets/img/firework_small.png" alt="firework small"/>
+                    <img src="/firework_small.png" alt="firework small"/>
                 </div>
 
                 <button className="win__button" onClick={handlePlayAgain}>

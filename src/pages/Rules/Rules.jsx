@@ -110,7 +110,7 @@ export function Rules() {
                 </div>
 
                 <div className="rules__image">
-                    <img src="/src/assets/img/art_img_1.png" alt="Game illustration"/>
+                    <img src="/art_img_1.png" alt="Game illustration"/>
                 </div>
 
                 <h2 className="rules__subtitle">Pick emoji and enter names:</h2>

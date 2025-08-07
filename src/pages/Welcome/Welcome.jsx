@@ -16,7 +16,7 @@ export default function Welcome() {
                 </h1>
 
                 <div className="welcome__art_container">
-                    <img src="/src/assets/img/art_mobile.PNG" alt="welcomeArt" className="welcome__art"/>
+                    <img src="/art_mobile.png" alt="welcomeArt" className="welcome__art"/>
                 </div>
 
                 <button className="welcome__button" onClick={() => navigate('/rules')}>
