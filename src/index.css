@@ -13,9 +13,16 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-optical-sizing: auto;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     /* Logo colors */
     --color-logo-blue-first: #006C84;
     --color-logo-orange-second: #f26b1d;

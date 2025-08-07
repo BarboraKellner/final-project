@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
+  background-attachment: fixed;
   overflow-y: auto;
 
   &__firework_large {
@@ -59,7 +60,7 @@
   }
 
   &__logo {
-    font-size: 5rem;
+    font-size: 2.5 rem;
     font-weight: 900;
     line-height: 0.8;
     padding-top: 1rem;

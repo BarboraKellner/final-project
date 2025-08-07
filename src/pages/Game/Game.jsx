@@ -21,7 +21,7 @@ function CountdownOverlay({ countdown }) {
 // Component for the logo
 function GameLogo() {
     return (
-        <h1 className="game-logo">
+        <h1 className="game-logo" id="game-top">
             <span className="first">NAME</span>
             <span className="second">THAT</span>
             <span className="third">THING!</span>
@@ -55,11 +55,11 @@ function GameContent({ round, selectedCat, letter, onShuffle, onNextRound, playe
             <h2 className="round-number">Round {round}</h2>
 
             <div className="round-info">
-                <LetterTile letter={letter} />
+                <LetterTile letter={letter}/>
             </div>
 
             <div className="category-section">
-                <CategoryTile category={selectedCat} />
+                <CategoryTile category={selectedCat}/>
             </div>
 
             <button className="shuffle-btn" onClick={onShuffle}>
@@ -80,25 +80,35 @@ function GameContent({ round, selectedCat, letter, onShuffle, onNextRound, playe
                 TOP UP
             </button>
 
-            <ScoreTable players={players} />
+            <ScoreTable players={players}/>
 
-            <button className="next-round-btn" onClick={onNextRound}>
+            <button className="next-round-btn" onClick={() => {
+                window.scrollTo(0, 0);  // Scroll immediately on click
+                onNextRound();
+            }}>
                 Next Round
             </button>
+            <button onClick={() => {
+                console.log('Scrolling to top');
+                window.scrollTo(0, 0);
+            }}>
+                TEST SCROLL
+            </button>
+
         </>
     );
 }
+
 // Component for winner selection dropdown
-function WinnerSelector({ players, selectedPlayerId, onPlayerSelect }) {
+function WinnerSelector({players, selectedPlayerId, onPlayerSelect}) {
     return (
         <div className="winner-selector">
-            <label>Points goes to...</label>
+            <label>Point goes to...</label>
             <select
                 value={selectedPlayerId || ''}
                 onChange={(e) => onPlayerSelect(e.target.value)}
                 className="player-dropdown"
             >
-                <option value="">Select player</option>
                 {players.map(player => (
                     <option key={player.id} value={player.id}>
                         {player.emoji} {player.name || `Player ${player.id}`}
@@ -111,6 +121,7 @@ function WinnerSelector({ players, selectedPlayerId, onPlayerSelect }) {
 
 // Component for the score table
 function ScoreTable({ players }) {
+
     // Sort players by score (highest first)
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
 
@@ -145,17 +156,18 @@ export function Game() {
     const [showCountdown, setShowCountdown] = useState(false)
     const [countdown, setCountdown] = useState(3)
     const [selectedPlayerId, setSelectedPlayerId] = useState(() =>
-        players && players.length > 0 ? players[0].id : null
+        players && players.length > 0 ? String(players[0].id) : null
     );
 
     useEffect(() => {
-        // Check if we're coming from Rules page
+
+
         const showInitial = localStorage.getItem('showInitialCountdown');
 
         if (showInitial === 'true') {
             localStorage.removeItem('showInitialCountdown');
 
-            // Show countdown first
+
             setShowCountdown(true);
             setCountdown(3);
 
@@ -177,6 +189,8 @@ export function Game() {
             getCategories();
         }
     }, [])
+
+
 
     const shuffle = (catList) => {
         const randomCat = catList[Math.floor(Math.random() * catList.length)]
@@ -212,6 +226,12 @@ export function Game() {
                     shuffle(categories)
                     setRound(round + 1)
                     setShowCountdown(false)
+
+                    const element = document.getElementById('game-top');
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+
                 }, 1000)
             }
         }, 1000)

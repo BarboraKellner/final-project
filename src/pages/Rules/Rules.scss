@@ -1,11 +1,13 @@
 .rules {
   min-height: 100vh;
   background-color: var(--color-bg-peach);
-  background-image: url('../../../public/background_waves.PNG');
+  background-image: url('../../../public/background_round.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-attachment:fixed;
   background-size: cover;
   overflow-y: auto;
+  padding-top: 1rem ;
 
   &__content {
     max-width: 600px;
@@ -48,7 +50,7 @@
     margin-bottom: 2rem;
 
     p {
-      margin: 0.5rem 0;
+      font-weight: 600;
     }
   }
 
