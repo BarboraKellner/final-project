@@ -88,13 +88,6 @@ function GameContent({ round, selectedCat, letter, onShuffle, onNextRound, playe
             }}>
                 Next Round
             </button>
-            <button onClick={() => {
-                console.log('Scrolling to top');
-                window.scrollTo(0, 0);
-            }}>
-                TEST SCROLL
-            </button>
-
         </>
     );
 }
