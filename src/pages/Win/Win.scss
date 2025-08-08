@@ -1,21 +1,17 @@
 .win {
   min-height: 100vh;
+  height: 100vh;
   background-image: url('/background_win_mobile.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
   background-attachment: scroll;
-
-  /* Center content vertically */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow-y: auto;
 
   &__firework_large {
     display: flex;
     justify-content: center;
-    margin: 1rem 0; /* Reduced from 2rem */
+    margin: 2rem 0;
 
     img {
       width: 8rem;
@@ -27,7 +23,7 @@
   &__firework_small {
     display: flex;
     justify-content: center;
-    margin: 0.5rem 0; /* Added small margin */
+    margin: 1rem 0;
 
     img {
       width: 3.5rem;
@@ -58,16 +54,16 @@
 
   &__content {
     max-width: 600px;
-    padding: 1rem; /* Reduced padding */
+    margin: 0 auto;
+    padding: 2rem 1rem;
     text-align: center;
-    flex-shrink: 0; /* Prevent shrinking */
   }
 
   &__logo {
-    font-size: 2.5rem; /* Fixed: removed space */
+    font-size: 2.5 rem;
     font-weight: 900;
     line-height: 0.8;
-    margin: 0 0 1rem 0; /* Added bottom margin */
+    //padding-top: 1rem;
 
     span {
       display: block;
@@ -90,28 +86,29 @@
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-logo-orange-second);
-    margin: 1rem 0; /* Simplified margins */
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
+
+
 
   &__winner-text {
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-text-dark);
-    margin-bottom: 1.5rem; /* Added margin to space from button */
 
     .win__winner-name {
       display: block;
       font-size: 2.8rem;
       font-weight: 900;
       color: var(--color-text-dark);
-      margin-bottom: 0.5rem; /* Small spacing between name and message */
-      line-height: 0.9; /* Slightly increased for better readability */
+      margin-bottom: 0rem;
     }
 
     .win__winner-message {
       font-size: 2rem;
       display: block;
-      margin-bottom: 0; /* Removed bottom margin */
+      margin-bottom: 1rem;
     }
   }
 
@@ -126,10 +123,11 @@
     cursor: pointer;
     font-family: inherit;
     transition: transform 0.2s;
-    margin-top: 1rem; /* Added top margin for spacing */
 
     &:hover {
       transform: scale(1.05);
     }
   }
 }
+
+
