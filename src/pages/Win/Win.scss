@@ -1,11 +1,11 @@
 .win {
   min-height: 100vh;
   background-color: var(--color-bg-peach);
-  background-image: url('../../../public/background_win_mobile.PNG');
+  background-image: url('/public/background_win_mobile.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   overflow-y: auto;
 
   &__firework_large {

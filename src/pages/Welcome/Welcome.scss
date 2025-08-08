@@ -8,7 +8,7 @@
   position: relative;
 
   &__bg {
-    background: url('../../../public/background_round.PNG') no-repeat center/cover;
+    background: url('/public/background_round.PNG') no-repeat center/cover;
     position: absolute;
     inset: 0;
     min-height: 100vh;
@@ -29,7 +29,7 @@
     font-size: 5rem;
     font-weight: 900;
     line-height: 0.8;
-    padding-top: 3rem;
+    //padding-top: 1rem;
     margin-bottom: 1rem;
 
     span {
