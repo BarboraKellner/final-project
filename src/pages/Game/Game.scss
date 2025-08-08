@@ -184,6 +184,11 @@
     background-position: right 1.5rem center;
     background-size: 1.5em;
     padding-right: 3rem;
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-button-orange);
+    }
+
   }
 }
 

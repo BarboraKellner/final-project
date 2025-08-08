@@ -20,7 +20,7 @@ export default function Welcome() {
                 </div>
 
                 <button className="welcome__button" onClick={() => navigate('/rules')}>
-                    Play now!
+                    Play!
                 </button>
             </div>
         </div>
