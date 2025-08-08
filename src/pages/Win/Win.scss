@@ -1,12 +1,11 @@
 .win {
   min-height: 100svh;
-  //height: 100vh;
   background-image: url('/background_win_mobile.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
   background-attachment: scroll;
-  //overflow-y: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +40,7 @@
       transform: scale(0.5);
       opacity: 1;
     }
-    70% {
+    50% {
       transform: scale(1.5);
       opacity: 0.85;
     }
@@ -91,7 +90,7 @@
     font-weight: bold;
     color: var(--color-logo-orange-second);
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
 
