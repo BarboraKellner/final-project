@@ -22,7 +22,7 @@
 }
 
 .category-tile {
-  background-color: #FFF4B2;
+  background-color: var(--color-tile-yellow);
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
   display: flex;
@@ -42,14 +42,13 @@
     font-weight: 700;
     font-size: 2.5rem;
     word-break: break-word;
-    text-align: center;
     line-height: 1.2;
   }
 }
 
 
 .letter-tile {
-  background-color: #49A8AD;
+  background-color: var(--color-tile-teal);
   color: white;
   width: 7rem;
   height: 7rem;
@@ -65,7 +64,7 @@
 .shuffle-btn {
   display: block;
   margin: 2.8rem auto;
-  background-color: #F26A3E;
+  background-color: var(--color-button-orange);
   color: white;
   padding: 1rem 3rem;
   font-size: 1.8rem;
@@ -83,14 +82,14 @@
 .round-number {
   font-size: 4rem;
   font-weight: bold;
-  color: #144552;
+  color: var(--color-text-dark);
   text-align: center;
 }
 
 .next-round-btn {
   display: block;
   margin: 2rem auto 2rem;
-  background-color: #144552;
+  background-color: var(--color-button-dark);
   color: white;
   padding: 1rem 3rem;
   font-size: 1.8rem;
@@ -111,7 +110,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('../../../public/background_round.PNG');
+  background-image: url('/public/background_round.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -141,7 +140,7 @@
 }
 .game-page {
   min-height: 100svh;
-  background-color: #fddbb2;
+  background-color: var(--color-bg-peach);
   background-image: url('/background_round.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -156,7 +155,6 @@
 
 
 .winner-selector {
-
   text-align: center;
   max-width: 400px;
 

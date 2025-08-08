@@ -1,6 +1,6 @@
 .win {
-  min-height: 100vsh;
- // background-color: var(--color-bg-peach);
+  min-height: 100vh;
+  height: 100vh;
   background-image: url('/background_win_mobile.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -64,7 +64,6 @@
     font-weight: 900;
     line-height: 0.8;
     padding-top: 1rem;
-    //margin-bottom: 1rem;
 
     span {
       display: block;
@@ -97,7 +96,6 @@
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-text-dark);
-   // margin: 1rem 0;
 
     .win__winner-name {
       display: block;
@@ -108,7 +106,6 @@
 
     .win__winner-message {
       font-size: 2rem;
-     // margin-top: 0.5rem;
       display: block;
       margin-bottom: 1rem;
     }

@@ -7,7 +7,6 @@ import {useGame} from '../../context/GameContext'
 import './Game.scss'
 
 
-// Component for the countdown overlay
 function CountdownOverlay({ countdown }) {
     return (
         <div className="countdown-screen">
@@ -18,7 +17,7 @@ function CountdownOverlay({ countdown }) {
     );
 }
 
-// Component for the logo
+
 function GameLogo() {
     return (
         <h1 className="game-logo" id="game-top">
@@ -29,7 +28,7 @@ function GameLogo() {
     );
 }
 
-// Component for the category tile
+
 function CategoryTile({ category }) {
     return (
         <div className="category-tile">
@@ -39,7 +38,7 @@ function CategoryTile({ category }) {
     );
 }
 
-// Component for the letter tile
+
 function LetterTile({ letter }) {
     return (
         <div className="letter-tile">
@@ -48,7 +47,7 @@ function LetterTile({ letter }) {
     );
 }
 
-// Component for the game content
+
 function GameContent({ round, selectedCat, letter, onShuffle, onNextRound, players, selectedPlayerId, onPlayerSelect, onAddPoint }) {
     return (
         <>
@@ -92,7 +91,7 @@ function GameContent({ round, selectedCat, letter, onShuffle, onNextRound, playe
     );
 }
 
-// Component for winner selection dropdown
+
 function WinnerSelector({players, selectedPlayerId, onPlayerSelect}) {
     return (
         <div className="winner-selector">
@@ -112,10 +111,10 @@ function WinnerSelector({players, selectedPlayerId, onPlayerSelect}) {
     );
 }
 
-// Component for the score table
+
 function ScoreTable({ players }) {
 
-    // Sort players by score (highest first)
+
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
 
     return (
@@ -137,7 +136,7 @@ function ScoreTable({ players }) {
 
 
 
-// Main Game component
+
 export function Game() {
     const { players, setPlayers } = useGame();
     const navigate = useNavigate();
@@ -173,12 +172,12 @@ export function Game() {
                     clearInterval(interval);
                     setTimeout(() => {
                         setShowCountdown(false);
-                        getCategories(); // Load categories AFTER countdown
+                        getCategories();
                     }, 1000);
                 }
             }, 1000);
         } else {
-            // Normal load
+
             getCategories();
         }
     }, [])

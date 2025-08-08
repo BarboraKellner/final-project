@@ -91,7 +91,8 @@ export function Rules() {
 
         localStorage.setItem('showInitialCountdown', 'true');
 
-        navigate('/game');}
+        navigate('/game');
+    };
 
 
     return (

@@ -5,7 +5,6 @@
   background-position: bottom center;
   background-attachment:scroll;
   background-size: cover;
-  //overflow-y: auto;
   padding-top: 1rem ;
 
   &__content {
@@ -71,7 +70,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    //gap: 0.2rem;
     position: relative;
   }
 
