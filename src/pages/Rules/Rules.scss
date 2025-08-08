@@ -1,12 +1,12 @@
 .rules {
-  min-height: 100vh;
+  min-height: 100svh;
   background-color: var(--color-bg-peach);
-  background-image: url('../../../public/background_round.PNG');
+  background-image: url('/public/background_round.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment:fixed;
   background-size: cover;
-  overflow-y: auto;
+  //overflow-y: auto;
   padding-top: 1rem ;
 
   &__content {

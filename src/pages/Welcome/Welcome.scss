@@ -1,17 +1,17 @@
 .welcome {
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
+  //position: relative;
 
   &__bg {
     background: url('/public/background_round.PNG') no-repeat center/cover;
     position: absolute;
     inset: 0;
-    min-height: 100vh;
+    min-height: 100svh;
     z-index: -1;
   }
 
@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 24rem;
+    max-width: 100vw;
   }
 
   &__art {
@@ -69,7 +69,7 @@
   &__button {
     font-family: "Baloo 2", sans-serif;
     margin: 1rem 0;
-    padding: 1.5rem 6rem;
+    padding: 1rem 5rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
