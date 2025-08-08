@@ -1,6 +1,6 @@
 .win {
-  min-height: 100vh;
-  background-color: var(--color-bg-peach);
+  min-height: 100vsh;
+ // background-color: var(--color-bg-peach);
   background-image: url('/background_win_mobile.PNG');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -64,7 +64,7 @@
     font-weight: 900;
     line-height: 0.8;
     padding-top: 1rem;
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
 
     span {
       display: block;
@@ -88,7 +88,7 @@
     font-weight: bold;
     color: var(--color-logo-orange-second);
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
 
@@ -110,7 +110,7 @@
       font-size: 2rem;
      // margin-top: 0.5rem;
       display: block;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
   }
 
